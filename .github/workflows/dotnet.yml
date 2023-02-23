@@ -1,0 +1,15 @@
+# This is a GitHub YAML workflow that installs the .NET 4.6 targeting pack (latest version) and then compiles an application
+name: .NET 4.6 Workflow
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Install .NET 4.6 targeting pack
+      run: choco install netfx-4.5.1-devpack
+    - name: setup-msbuild
+      uses: microsoft/setup-msbuild@v1.3.1
+    - name: execute build
+      run: msbuild.exe PartsUnlimited-aspnet45/PartsUnlimited.sln /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true
