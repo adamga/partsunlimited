@@ -1,0 +1,14 @@
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\bin\Debug\chromedriver.exe
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\bin\Debug\FabrikamFiber.SeleniumTests.dll
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\bin\Debug\FabrikamFiber.SeleniumTests.pdb
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\bin\Debug\WebDriver.dll
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\bin\Debug\WebDriver.xml
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\obj\Debug\FabrikamFiber.SeleniumTests.csproj.AssemblyReference.cache
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\obj\Debug\FabrikamFiber.SeleniumTests.csproj.CoreCompileInputs.cache
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\obj\Debug\FabrikamFiber.SeleniumTests.csproj.CopyComplete
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\obj\Debug\FabrikamFiber.SeleniumTests.dll
+C:\Repos\PartsUnlimited\PartsUnlimited-aspnet45\test\FabrikamFiber.SeleniumTests\obj\Debug\FabrikamFiber.SeleniumTests.pdb

@@ -1,0 +1,367 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vaults_agPartsPipelineKV_name": {
+      "defaultValue": "agPartsPipelineKV",
+      "type": "String"
+    }
+  },
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.KeyVault/vaults",
+      "apiVersion": "2022-07-01",
+      "name": "[parameters('vaults_agPartsPipelineKV_name')]",
+      "location": "canadacentral",
+      "properties": {
+        "sku": {
+          "family": "A",
+          "name": "Standard"
+        },
+        "tenantId": "16b3c013-d300-468d-ac64-7eda0820b6d3",
+        "accessPolicies": [
+          {
+            "tenantId": "16b3c013-d300-468d-ac64-7eda0820b6d3",
+            "objectId": "ef528ba0-b510-43df-81f5-9b3f0de54b15",
+            "permissions": {
+              "keys": [
+                "Get",
+                "List",
+                "Update",
+                "Create",
+                "Import",
+                "Delete",
+                "Recover",
+                "Backup",
+                "Restore",
+                "GetRotationPolicy",
+                "SetRotationPolicy",
+                "Rotate"
+              ],
+              "secrets": [
+                "Get",
+                "List",
+                "Set",
+                "Delete",
+                "Recover",
+                "Backup",
+                "Restore"
+              ],
+              "certificates": [
+                "Get",
+                "List",
+                "Update",
+                "Create",
+                "Import",
+                "Delete",
+                "Recover",
+                "Backup",
+                "Restore",
+                "ManageContacts",
+                "ManageIssuers",
+                "GetIssuers",
+                "ListIssuers",
+                "SetIssuers",
+                "DeleteIssuers"
+              ]
+            }
+          },
+          {
+            "tenantId": "16b3c013-d300-468d-ac64-7eda0820b6d3",
+            "objectId": "53f9100f-4ad6-4524-8cde-9f2cbfd88170",
+            "permissions": {
+              "certificates": [
+                "Get",
+                "List",
+                "Update",
+                "Create",
+                "Import",
+                "Delete",
+                "Recover",
+                "Backup",
+                "Restore",
+                "ManageContacts",
+                "ManageIssuers",
+                "GetIssuers",
+                "ListIssuers",
+                "SetIssuers",
+                "DeleteIssuers"
+              ],
+              "keys": [
+                "Get",
+                "List",
+                "Update",
+                "Create",
+                "Import",
+                "Delete",
+                "Recover",
+                "Backup",
+                "Restore",
+                "GetRotationPolicy",
+                "SetRotationPolicy",
+                "Rotate"
+              ],
+              "secrets": [
+                "Get",
+                "List",
+                "Set",
+                "Delete",
+                "Recover",
+                "Backup",
+                "Restore"
+              ]
+            }
+          },
+          {
+            "tenantId": "16b3c013-d300-468d-ac64-7eda0820b6d3",
+            "objectId": "55e00fc6-a8d1-4f7a-bc63-9cafa00434e1",
+            "permissions": {
+              "keys": [],
+              "secrets": [
+                "Get",
+                "List"
+              ],
+              "certificates": []
+            }
+          }
+        ],
+        "enabledForDeployment": false,
+        "enabledForDiskEncryption": false,
+        "enabledForTemplateDeployment": false,
+        "enableSoftDelete": true,
+        "softDeleteRetentionInDays": 90,
+        "enableRbacAuthorization": false,
+        "vaultUri": "https://agpartspipelinekv.vault.azure.net/",
+        "provisioningState": "Succeeded",
+        "publicNetworkAccess": "Enabled"
+      }
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/adminpassword')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/adminusername')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/container')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/dbhostname')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/dbname')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/dbtier')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/storageacct')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/storagecontainer')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/webhostname')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ],
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/websitename')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/websiteslotname')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    },
+        {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/rgname')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    },
+        {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/azregion')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/webtier')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    },
+        {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2022-07-01",
+      "name": "[concat(parameters('vaults_agPartsPipelineKV_name'), '/dbconn')]",
+      "properties": {
+        "value": "na",
+        "attributes": {
+          "enabled": true
+        }
+      },
+      "location": "canadacentral",
+      "dependsOn": [
+        "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_agPartsPipelineKV_name'))]"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+﻿{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "WebsiteName": {
+            "value": "agpartsul"
+        },
+        "PartsUnlimitedServerName": {
+            "value": "agpartsulserver1"
+        },
+        "PartsUnlimitedHostingPlanName": {
+            "value": "agpartsulhost"
+        },
+        "CdnStorageAccountName": {
+            "value": "agpartsulst1"
+        },
+        "CdnStorageContainerName": {
+            "value": "agpartsulcont1"
+        },
+        "CdnStorageAccountNameForDev": {
+            "value": "agpartsulst1dev"
+        },
+        "CdnStorageContainerNameForDev": {
+            "value": "agpartsulcont1dev"
+        },
+        "CdnStorageAccountNameForStaging": {
+            "value": "agpartsulst1stage"
+        },
+        "CdnStorageContainerNameForStaging": {
+            "value": "agpartsulcont1stage"
+        },
+      "PartsUnlimitedDBEdition": {
+        "value": "Standard"
+      }
+    }
+}

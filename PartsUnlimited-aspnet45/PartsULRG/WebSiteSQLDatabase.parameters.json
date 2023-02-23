@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "hostingPlanName": {
+      "value": "agpartsulhosting"
+    },
+    "administratorLogin": {
+      "value": "adminuser"
+    },
+    "databaseName": {
+      "value": "partsul"
+    },
+    "websitename": {
+      "value": "agpartsul1"
+    },
+    "sqlname": {
+      "value": "agpartsul1"
+    },
+    "skuName": {
+      "value": "S1"
+    }
+  }
+}

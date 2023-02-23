@@ -1,0 +1,13 @@
+az keyvault secret set --name adminpassword --vault-name agPartsPipelineKVdev --value 'P2ssw0rd1234!!'
+az keyvault secret set --name adminusername --vault-name agPartsPipelineKVdev --value adminUser
+az keyvault secret set --name container --vault-name agPartsPipelineKVdev --value cont
+az keyvault secret set --name dbhostname --vault-name agPartsPipelineKVdev --value partsulsqldev
+az keyvault secret set --name dbname --vault-name agPartsPipelineKVdev --value parts
+az keyvault secret set --name dbtier --vault-name agPartsPipelineKVdev --value Basic
+az keyvault secret set --name storageacct --vault-name agPartsPipelineKVdev --value agpartsulstorage
+az keyvault secret set --name webhostname --vault-name agPartsPipelineKVdev --value agPartsULHostDev
+az keyvault secret set --name websitename --vault-name agPartsPipelineKVdev --value agpartsuldev
+az keyvault secret set --name webtier --vault-name agPartsPipelineKVdev --value S1
+az keyvault secret set --name dbconn --vault-name agPartsPipelineKVdev --value 'aaa'
+az keyvault secret set --name rgname --vault-name agPartsPipelineKVdev --value 'agpartsulrg'
+az keyvault secret set --name azregion --vault-name agPartsPipelineKVdev --value canadacentral

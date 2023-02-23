@@ -1,0 +1,27 @@
+﻿{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "WebsiteName": {
+            "value": "agpartsul1"
+        },
+        "PartsUnlimitedServerName": {
+            "value": "agpartsiul1svr"
+        },
+        "PartsUnlimitedHostingPlanName": {
+            "value": "PartsBasicFree"
+        },
+        "CdnStorageAccountName": {
+            "value": "agpartsulstorage1"
+        },
+        "CdnStorageContainerName": {
+            "value": "cdn"
+        },
+        "PartsUnlimitedServerAdminLoginPassword": {
+            "value": "P2ssw0rd1234!!"
+        },
+      "PartsUnlimitedHostingPlanSKU": {
+        "value": "Standard"
+      }
+    }
+}
