@@ -1,5 +1,5 @@
 # This is a GitHub YAML workflow that installs the .NET 4.6 targeting pack (latest version) and then compiles an application
-name: .NET 4.6 Workflow
+name: .NET 4.5 Workflow
 on: [push, pull_request]
 jobs:
   build:
@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-    - name: Install .NET 4.6 targeting pack
+    - name: Install .NET 4.5 targeting pack
       run: choco install netfx-4.5.1-devpack
     - name: setup-msbuild
       uses: microsoft/setup-msbuild@v1.3.1
